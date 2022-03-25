@@ -11,6 +11,15 @@ it("should get basic data on the country canada", async () => {
 
 /** Add test for getRegionCountries function here */
 
+it("should get names of regional countries", async () => {
+  const data = await countries.getRegionCountries('efta');
+  expect(data).toEqual([
+    'Iceland', 'Liechtenstein', 'Norway', 'Switzerland'
+  ]);
+});
+
+
+
 
 it("should get capitals of NAFTA countries", async () => {
   const data = await countries.getRegionCapitals('nafta');
